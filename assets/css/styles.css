@@ -1,0 +1,292 @@
+/* Contenedor principal en grid */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+main {
+    background:whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.grid-twitter {
+    display: grid;
+    width: 100%;
+    max-width: 1300px;
+    grid-template-columns: 1fr 700px 1fr; /* Se ajusta el ancho de la tercera columna */
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Barra lateral derecha */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+
+/* Barra lateral izquierda */
+.Inicio {
+    
+    border-radius: 10px;
+    padding: 1px;
+    margin: 1px;
+}
+
+.Inicio ul {
+    list-style: none;
+}
+
+.Inicio ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.Inicio ul li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.Inicio button{
+     border-radius: 10px;
+   display: flex; 
+   justify-content: center;
+   text-align: center;
+   margin-left: 30px;  
+   width: 150px;   
+ }
+
+/* Contenedor de pestañas */
+.tabs-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 0; /* Inicia con ancho 0 */
+    background-color: #1DA1F2;
+    border-radius: 2px;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+
+/* Botones de pestañas */
+.tab-btn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+}
+.tab-btn:hover{
+    width: 120px;
+}
+.tab-btn.active {
+    color: #1DA1F2;
+}
+
+.publicar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón hacia abajo */
+    width: 100%;
+    min-height: 150px; /* Ajusta el tamaño del textarea */
+    border-color:none;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative; /* Mantiene estructura */
+
+}
+
+textarea {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: whitesmoke;
+  }
+  
+
+
+
+.publicar:hover{
+    color:white;
+}
+.icont {
+    display: flex;
+    align-items: center;  
+    justify-content: space-between; 
+    width: 100%;
+    padding: 20px;
+    gap:1px;
+
+}
+
+.btnicont {
+    margin-left: auto; 
+    border-radius: 20px;
+}
+
+
+.icont i{
+    margin-right: 10px;
+
+}
+
+.news1, .news2 {
+    
+    border-radius: 10px;
+    padding: 10px;
+}
+.CR7{
+    display: flex;
+    font-size:10px;
+    border-radius:50%;
+    position: absolute;
+width: 30px;
+}
+.news1 h4{
+    margin: 10px;
+    text-align: right;
+}
+.cr7A{
+    display: flex;
+    width:  auto;
+    margin-left: 65px;
+}
+.Robby{
+    width: 40px;
+    border-radius: 50%;
+    
+}
+.twitter-tweet {
+    display: flex;
+    width: auto;
+    margin-left: 65px;
+}
+/* Barra lateral derecha */
+.sidebar {
+    
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; 
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; 
+    font-size: 16px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Espacio para el ícono */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    color: white;
+}
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Ajusta según necesidad */
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; /* Ajusta la posición horizontal */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; /* Color del ícono */
+    font-size: 16px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Espacio para el ícono */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    
+    color: black;
+}
+
+
+.x{
+    grid-column: 3;
+   
+}
+.bi-three-dots {
+    display: inline-flex; /* Asegura que el borde se aplique correctamente */
+    align-items: center;
+    justify-content: center;
+    width: 30px;  /* Ajusta según necesidad */
+    height: 30px; /* Ajusta según necesidad */
+    border-radius: 50%;
+    background-color: #ddd; /* Opcional, para visualizar mejor */
+    border: 2px solid black;
+    padding: 5px; /* Asegura un mejor espaciado */
+}
+ul {font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    list-style: none; /* Quita las viñetas */
+    padding: 0; /* Opcional: elimina el espacio a la izquierda */
+    margin: 0;  /* Opcional: elimina el margen por defecto */
+}
+.where li img{
+    width: 30px;
+    border-radius: 50%;
+}
+.where li button{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 30px;}
+
+.where {justify-content: left;
+gap: 30px;
+margin: 0;
+font-size: 10px;
+padding: 0%;
+    }
+
+/* Estilos de botones */
+.suscribete{
+    border-radius: 10px;
+    text-align:center ;
+}
+button {
+    width: 100px;
+    padding: 10px 20px;
+    background-color:rgb(26, 25, 25);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: gray;
+}
